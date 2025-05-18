@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Care</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+    <meta name="theme-color" content="#4A90E2"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Assist. Mamãe">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/icon-192x192.png') }}">
+</head>
+<body>
+    <header>
+        <h1>Baby Care</h1>
+    </header>
+    <main>
+        <form id="userInfoForm">
+            <h2>Suas Informações</h2>
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div>
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div>
+                <label for="state">Estado (ex: SP):</label>
+                <input type="text" id="state" name="state" maxlength="2" required>
+            </div>
+
+            <h2>Gravidez</h2>
+            <div>
+                <label>Você está grávida?</label>
+                <input type="radio" id="gestanteSim" name="is_gestation" value="sim" required>
+                <label for="gestanteSim">Sim</label>
+                <input type="radio" id="gestanteNao" name="is_gestation" value="nao">
+                <label for="gestanteNao">Não</label>
+            </div>
+
+            <div id="gestacaoInfo" class="hidden">
+                <label for="week_gestation">Qual é a semana de gestação?</label>
+                <input type="number" id="week_gestation" name="week_gestation">
+            </div>
+
+            <div id="bebeInfo" class="hidden">
+                <h3>Informações do Bebê</h3>
+                <div>
+                    <label for="baby_name">Nome do bebê:</label>
+                    <input type="text" id="baby_name" name="baby_name">
+                </div>
+                <div>
+                    <label for="baby_age">Idade do bebê (anos):</label>
+                    <input type="text" id="baby_age" name="baby_age">
+                </div>
+            </div>
+
+            <button type="submit">Obter Informações</button>
+        </form>
+
+        <div id="loading" class="hidden">
+            <p>Carregando informações...</p>
+        </div>
+
+        <section id="results" class="hidden">
+            <h2>Resultados</h2>
+            
+            <div id="refinement_info_res" class="result-box hidden">
+                <h3>Análise e Cuidados</h3>
+                <pre></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Baby Care</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
