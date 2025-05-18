@@ -29,20 +29,7 @@ O Baby Care foi pensado com o coração, para que cada pai e mãe se sintam mais
 
 ## Estrutura
 
-/seu-app-pwa
-|-- app.py 
-|-- static/
-|   |-- css/
-|   |   `-- style.css
-|   |-- js/
-|   |   `-- script.js 
-|   |-- images/
-|   |   |-- icon-192x192.png
-|   |   `-- icon-512x512.png
-|   `-- manifest.json 
-|-- templates/
-|   `-- index.html
-`-- service-worker.js
+![alt text](/static/images/structure.png)
 
 ## Execução
 
