@@ -30,19 +30,19 @@ O Baby Care foi pensado com o coração, para que cada pai e mãe se sintam mais
 ## Estrutura
 
 /seu-app-pwa
-|-- app.py                   # Backend Flask com a lógica do seu app
+|-- app.py 
 |-- static/
 |   |-- css/
-|   |   `-- style.css        # Estilos da PWA
+|   |   `-- style.css
 |   |-- js/
-|   |   `-- script.js        # Lógica do frontend da PWA
-|   |-- images/              # Ícones para a PWA
+|   |   `-- script.js 
+|   |-- images/
 |   |   |-- icon-192x192.png
 |   |   `-- icon-512x512.png
-|   `-- manifest.json        # Manifesto da Web App
+|   `-- manifest.json 
 |-- templates/
-|   `-- index.html           # Arquivo HTML principal da PWA
-`-- service-worker.js        # Service Worker (no diretório raiz para escopo)
+|   `-- index.html
+`-- service-worker.js
 
 ## Execução
 
