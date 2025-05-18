@@ -22,3 +22,40 @@ O Baby Care é mais do que um aplicativo; é um abraço digital que oferece:
 * **🛠️ Recursos e Ferramentas Úteis:** Tenha acesso a listas de vacinação, acompanhamento de consultas médicas, lembretes importantes e outras ferramentas que facilitam o dia a dia.
 
 O Baby Care foi pensado com o coração, para que cada pai e mãe se sintam mais seguros, informados e amparados nessa linda e transformadora jornada da parentalidade. Conte conosco para celebrar cada sorriso, cada aprendizado e cada novo dia ao lado do seu pequeno tesouro.
+
+![alt text](/static/images/image.png)
+
+# Como Iinicar o projeto
+
+## Estrutura
+
+/seu-app-pwa
+|-- app.py                   # Backend Flask com a lógica do seu app
+|-- static/
+|   |-- css/
+|   |   `-- style.css        # Estilos da PWA
+|   |-- js/
+|   |   `-- script.js        # Lógica do frontend da PWA
+|   |-- images/              # Ícones para a PWA
+|   |   |-- icon-192x192.png
+|   |   `-- icon-512x512.png
+|   `-- manifest.json        # Manifesto da Web App
+|-- templates/
+|   `-- index.html           # Arquivo HTML principal da PWA
+`-- service-worker.js        # Service Worker (no diretório raiz para escopo)
+
+## Execução
+
+### No Windows:
+python -m venv venv
+.\venv\Scripts\activate
+
+### No macOS e Linux:
+python3 -m venv venv
+source venv/bin/activate
+
+### Instale as Dependências
+pip install -r requirements.txt
+
+### Execução
+python3 app.py
